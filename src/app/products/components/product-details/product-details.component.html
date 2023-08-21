@@ -1,0 +1,25 @@
+
+
+<div class="box mt-5">
+  <div class="row g-4" *ngIf="!loading">
+    <div class="col-12 col-md-6">
+      <img src="{{data.image}}" alt="prod_img" srcset="" class="w-100">
+    </div>
+    <div class="col-12 col-md-6">
+      <div class="info">
+        <ul class="list-unstyled">
+          <li class="pb-4 fs-2"><strong>Title: </strong>{{data.title}}</li>
+          <li class="pb-4 fs-2"><strong>Description: </strong>{{data.description}}</li>
+          <li class="pb-4 fs-2"><strong>Category: </strong>{{data.category}}</li>
+          <li class="pb-4 fs-2"><strong>Rate: </strong>{{data.rating.rate}}</li>
+          <li class="pb-4 fs-2"><strong>Count: </strong>{{data.rating.count}}</li>
+          <li class="pb-4 fs-2"><strong>Price: </strong>{{data.price}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+    <app-spinner *ngIf="loading"></app-spinner>
+  </div>
+</div>
+
